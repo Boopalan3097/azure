@@ -11,6 +11,7 @@ module "datafactory" {
 }
 
 resource "azurerm_databricks_workspace" "databricks" {
+  source                    = "./modules/databricks"
   name                      = var.databricks_name
   resource_group_name       = var.resource_group_name
   resource_group_location   = var.resource_group_location
